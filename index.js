@@ -1,13 +1,18 @@
 const express = require("express");
 const axios = require("axios");
-const app = express();
 const cors = require("cors");
 require('dotenv').config();
 
+const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 const CAT_FACT_API_URL = process.env.CAT_FACT_API_URL;
+
+// Root endpoint for testing
+app.get("/", (req, res) => {
+  res.send("🚀 Backend Wizard API is live!");
+});
 
 app.get("/me", async (req, res) => {
   try {
@@ -16,9 +21,9 @@ app.get("/me", async (req, res) => {
       name: "Abdulsalam Akinyoola",
       stack: "Node.js/Express",
     };
+
     const timestamp = new Date().toISOString();
     const {data} = await axios.get(CAT_FACT_API_URL, { timeout: 5000 });
-
 
     res.setHeader("Content-Type", "application/json");
     res.status(200).json({
@@ -27,7 +32,7 @@ app.get("/me", async (req, res) => {
       timestamp,
       fact: data.fact,
     });
-    console.log(fact)
+
   } catch (error) {
     // Handle timeout error
     if (error.code === "ECONNABORTED") {
@@ -45,6 +50,7 @@ app.get("/me", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });
