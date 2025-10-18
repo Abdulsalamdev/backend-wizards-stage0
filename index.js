@@ -2,7 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 require('dotenv').config();
-const serverless = require("serverless-http");
+
 
 const app = express();
 app.use(cors());
@@ -12,7 +12,7 @@ const CAT_FACT_API_URL = process.env.CAT_FACT_API_URL;
 
 // Root endpoint for testing
 app.get("/", (req, res) => {
-  res.send("🚀 Backend Wizard API is live!");
+  res.send("Backend Wizard APIStage 0 is live!");
 });
 
 app.get("/me", async (req, res) => {

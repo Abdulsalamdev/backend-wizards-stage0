@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Backend API for HNG stage 0",
   "main": "index.js",
-  "scripts": {      
-    "start": "node index.js",         
-    "build": "echo 'No build step required'"       
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'No build step required'"
   },
-  "keywords": ["netlify", "express", "serverless", "api"],
   "author": "Abdulsalam Akinyoola (Silent Architect)",
   "license": "ISC",
   "type": "commonjs",
@@ -15,11 +14,6 @@
     "axios": "^1.12.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "serverless-http": "^4.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.4",
-    "netlify-cli": "^17.0.1"
+    "express": "^5.1.0"
   }
 }
