@@ -37,5 +37,6 @@ Returns JSON data in this exact format:
 
 ## Live Demo
 ```
-API Endpoint: https://backend-wizards-stage.pxxl.click/me
+API Endpoint: backend-wizards-stage0-production-36ae.up.railway.app
+Cat API Endpoint: backend-wizards-stage0-production-36ae.up.railway.app/me
 ```
