@@ -1,13 +1,11 @@
 {
   "name": "hng-stage-zero",
   "version": "1.0.0",
-  "description": "Backend API for HNG stage 0, deployable on Netlify Functions",
-  "main": "netlify/functions/api.js",
-  "scripts": {
-    "dev": "nodemon index.js",         
+  "description": "Backend API for HNG stage 0",
+  "main": "index.js",
+  "scripts": {      
     "start": "node index.js",         
-    "build": "echo 'No build step required'", 
-    "serve": "netlify dev"            
+    "build": "echo 'No build step required'"       
   },
   "keywords": ["netlify", "express", "serverless", "api"],
   "author": "Abdulsalam Akinyoola (Silent Architect)",
